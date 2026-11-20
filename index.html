@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Competencia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/iconos/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-contenido">
+            <div class="usuario">
+                <img id="img-user" src="src/img/perfil-imagen.jpg" alt="">
+                <span  class="span-info-user">
+                    <p id="username">Joel Fernando</p>
+                    <p id="user-carrera">Ing. Informatica</p>
+                </span>
+            </div>
+            <div class="titulo">
+                <img id="header-logo" src="src/img/CodeClash Arena Logo3.png" alt="">
+                <img id="header-logo-mini" src="src/img/CodeClash Arena Logo3 Mini.png" alt="">
+            </div>
+            <div class="contador">
+                <span class="header-span-problemas">
+                    <p>Problemas resueltos:</p>
+                    <span class="span-contador">
+                        <p id="cantidad-problemas-resueltos">0</p>
+                        <p>/</p>
+                        <p id="cantidad-problemas-total">15</p>
+                    </span>
+                </span>
+                <span class="header-span-puntos">
+                    <p>Puntos:</p>
+                    <span class="span-puntos">
+                        <p id="cantidad-puntos-acumulados">0</p>
+                        <p>pts.</p>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="pantalla-inicio" class="pantalla pantalla-inicio">
+            <div class="filtros">
+                <p id="filtrar-por">Filtrar por:</p>
+                <span class="span-buttons-filtros">
+                    <button id="button-filtro-todos">Todos</button>
+                    <button id="button-filtrar-by-categoria">Categoria</button>
+                    <button id="button-filtrar-by-dificultad">Dificultad</button>
+                </span>
+                <span class="span-buttons-categorias">
+                    <button id="button-filtro-algoritmos">Algoritmos</button>
+                    <button id="button-filtro-web">Web</button>
+                    <button id="button-filtro-datos">Datos</button>
+                </span>
+                <span class="span-buttons-dificultad">
+                    <button id="button-filtro-facil">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </button>
+                    <button id="button-filtro-normal">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </button>
+                    <button id="button-filtro-dificil">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </button>
+                </span>
+            </div>
+
+            <!-- ///////////////// -->
+            <!-- ///// cards ///// -->
+            <div class="cards">
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-1.jpg" alt="">
+                        <p id="card-categoria">Algoritmos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Búsqueda Binaria</h2>
+                                    <p id="card-puntaje">180</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-normal">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Implementa un algoritmo de búsqueda eficiente para grandes volúmenes de datos ordenados.</p>
+                                <p id="card-chips">JavaScript, Arrays, Lógica</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-2.jpg" alt="">
+                        <p id="card-categoria">Datos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Normalización BD</h2>
+                                    <p id="card-puntaje">300</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-dificil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Estructura un esquema relacional complejo aplicando hasta la tercera forma normal.</p>
+                                <p id="card-chips">SQL, Normalización, Relaciones</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-3.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">APIs Asíncronas</h2>
+                                    <p id="card-puntaje">100</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Consume datos de un endpoint externo utilizando promesas y async/await.</p>
+                                <p id="card-chips">JavaScript, Fetch API, Async</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-4.jpg" alt="">
+                        <p id="card-categoria">Algoritmos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Árboles Binarios</h2>
+                                    <p id="card-puntaje">280</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-dificil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Desarrolla métodos de recorrido para validar nodos en un árbol binario.</p>
+                                <p id="card-chips">Recursividad, Árboles, Estructuras</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-5.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Gestión del DOM</h2>
+                                    <p id="card-puntaje">110</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Crea una interfaz interactiva capaz de manipular elementos en tiempo real.</p>
+                                <p id="card-chips">DOM, JavaScript, Eventos</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-6.jpg" alt="">
+                        <p id="card-categoria">Datos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Consultas SQL</h2>
+                                    <p id="card-puntaje">190</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-normal">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Construye consultas multitabla complejas utilizando funciones de agregación.</p>
+                                <p id="card-chips">SQL, Joins, Agregación</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-7.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Validación Regex</h2>
+                                    <p id="card-puntaje">95</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Implementa expresiones regulares robustas para validar correos y contraseñas.</p>
+                                <p id="card-chips">Regex, Validación, UX</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-8.jpg" alt="">
+                        <p id="card-categoria">Algoritmos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Series Fibonacci</h2>
+                                    <p id="card-puntaje">90</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Calcula números de Fibonacci usando programación dinámica para optimizar tiempo.</p>
+                                <p id="card-chips">Recursión, Dinámica, Ciclos</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-9.jpg" alt="">
+                        <p id="card-categoria">Datos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Índices SQL</h2>
+                                    <p id="card-puntaje">210</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-normal">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Optimiza el rendimiento de consultas masivas aplicando índices B-Tree adecuados.</p>
+                                <p id="card-chips">SQL, Performance, Índices</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-10.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Filtros dinámicos</h2>
+                                    <p id="card-puntaje">175</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-normal">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Filtra una lista de elementos en tiempo real según la entrada del usuario.</p>
+                                <p id="card-chips">JavaScript, Arrays, Filter</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-11.jpg" alt="">
+                        <p id="card-categoria">Algoritmos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Algoritmo Dijkstra</h2>
+                                    <p id="card-puntaje">310</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-dificil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Encuentra la ruta más corta en un grafo ponderado usando colas de prioridad.</p>
+                                <p id="card-chips">Grafos, Rutas, Algoritmos</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-12.jpg" alt="">
+                        <p id="card-categoria">Datos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Triggers en SQL</h2>
+                                    <p id="card-puntaje">290</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-dificil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Configura disparadores automáticos para auditoría de cambios en tablas clave.</p>
+                                <p id="card-chips">SQL, Triggers, Auditoría</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-13.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">LocalStorage Sync</h2>
+                                    <p id="card-puntaje">105</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Persiste el estado de una aplicación web directamente en el navegador.</p>
+                                <p id="card-chips">Storage, JSON, Persistencia</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-14.jpg" alt="">
+                        <p id="card-categoria">Algoritmos</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">Palíndromos</h2>
+                                    <p id="card-puntaje">85</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Verifica si una cadena de texto es simétrica ignorando espacios y puntuación.</p>
+                                <p id="card-chips">Strings, Lógica, Regex</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="img-card-banner" src="src/banners/card-banner-15.jpg" alt="">
+                        <p id="card-categoria">Web</p>
+                    </div>
+                    <div class="card-div-principal">
+                        <span class="card-span-contenido">
+                            <span class="card-span-header">
+                                <span class="card-span-titulo">
+                                    <h2 id="card-titulo">DarkMode Toggle</h2>
+                                    <p id="card-puntaje">100</p>
+                                    <p id="card-puntaje-pts">pts.</p>
+                                </span>
+                                <span class="card-span-dificultad-facil">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </span>
+                            <span class="class-span-info">
+                                <p id="card-descripcion">Implementa un interruptor de tema oscuro/claro guardando la preferencia del usuario.</p>
+                                <p id="card-chips">CSS Variables, DOM, Themes</p>
+                            </span>
+                        </span>
+                        <span class="card-span-acciones">
+                            <button id="card-accion-completado"><i class="fa-solid fa-check"></i></button>
+                            <button id="card-accion-favorito"><i class="fa-regular fa-bookmark"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="pantalla-cuenta" class="pantalla oculto">
+            <div class="panel-pantalla">
+                <img class="cuenta-foto" src="src/img/perfil-imagen.jpg" alt="">
+                <h2>Joel Fernando</h2>
+                <p>Ing. Informatica</p>
+            </div>
+        </div>
+        <div id="pantalla-ajustes" class="pantalla oculto">
+            <div class="panel-pantalla">
+                <h2>Ajustes</h2>
+                <div class="ajustes-fila"><span>Notificaciones</span><span>Activadas</span></div>
+                <div class="ajustes-fila"><span>Tema</span><span>Claro</span></div>
+                <div class="ajustes-fila"><span>Idioma</span><span>Español</span></div>
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <span class="nav-span-inicio activo" data-pantalla="pantalla-inicio">
+            <i class="fa-solid fa-house"></i>
+            <p>Inicio</p>
+        </span>
+        <span class="nav-span-cuenta" data-pantalla="pantalla-cuenta">
+            <i class="fa-solid fa-user"></i>
+            <p>Cuenta</p>
+        </span>
+        <span class="nav-span-ajustes" data-pantalla="pantalla-ajustes">
+            <i class="fa-solid fa-gear"></i>
+            <p>Ajustes</p>
+        </span>
+    </nav>
+
+    <div id="loader">
+        <img class="loader-logo" src="src/img/CodeClash Arena Logo3.png" alt="CodeClash Arena">
+        <div class="loader-spinner"></div>
+        <p id="loader-texto">Conectando con el servidor de jueceo...</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
